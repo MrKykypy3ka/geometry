@@ -10,5 +10,11 @@ def main():
     sys.exit(app.exec_())
 
 
+def excepthook(exc_type, exc_value, exc_tb):
+    tb = "".join(traceback.format_exception(exc_type, exc_value, exc_tb))
+
+
+sys.excepthook = excepthook
+
 if __name__ == '__main__':
     main()
