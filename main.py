@@ -1,3 +1,5 @@
+import traceback
+
 from PyQt5.QtWidgets import QApplication, QWidget
 from app.mainWin import MainWin
 import sys
@@ -5,6 +7,7 @@ import sys
 
 def main():
     app = QApplication([])
+    # app.setStyleSheet("QLabel{font-size: 45pt;}")
     win = MainWin()
     win.show()
     sys.exit(app.exec_())

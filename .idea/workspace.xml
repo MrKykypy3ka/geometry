@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="start project">
-      <change afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/icons/ico.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/icons/ico1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/images/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/exerciseWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mainWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mainWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/tasksWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tasksWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/geometry.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/geometry.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,16 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kykypy3a\PycharmProjects\geometry\resources\images" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="geometry" />

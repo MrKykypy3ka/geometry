@@ -11,6 +11,7 @@ class MainWin(QWidget):
     def init_ui(self):
         self.setWindowTitle('Геометр')
         self.resize(300, 400)
+        self.setFixedSize(self.width(), self.height())
         self.setWindowIcon(QIcon('resources/icons/ico.png'))
         self.lessons_btn = QPushButton('Уроки')
         self.configurator_btn = QPushButton('Конфигуратор')

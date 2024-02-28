@@ -11,6 +11,7 @@ class TasksWin(QWidget):
     def init_ui(self):
         self.setWindowTitle('Геометр')
         self.resize(300, 200)
+        self.setFixedSize(self.width(), self.height())
         self.setWindowIcon(QIcon('resources/icons/ico.png'))
         self.choice_btn = QPushButton('Выбрать урок')
         self.blitz_btn = QPushButton('Блиц')
