@@ -1,12 +1,15 @@
-from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QLabel, QGroupBox
-from PyQt5.QtGui import QIcon, QPixmap, QImage, QFont
+from PyQt5.QtCore import QByteArray
+from PyQt5.QtGui import QIcon, QPixmap, QImage
+from PyQt5.QtWidgets import QWidget, QPushButton, QHBoxLayout
+from classes.new_widgets import *
+from database.scripts.db import Data
 
 
 class ExerciseWin(QWidget):
     def __init__(self):
         super().__init__()
         self.init_ui()
+        self.db = Data('database/geometry.db')
         self.load_question()
 
     def init_ui(self):
@@ -19,8 +22,8 @@ class ExerciseWin(QWidget):
         self.title = QLabel('Вопрос')
         self.image = QLabel()
         self.image.setStyleSheet('border: 1px solid black;')
-        self.right_answers = QGroupBox('Правильные ответы')
-        self.all_answers = QGroupBox('Варианты ответов')
+        self.right_answers = DroppableGroupBox('Правильные ответы')
+        self.all_answers = DroppableGroupBox('Варианты ответов')
         self.ok = QPushButton('Проверить')
         v_l1.addWidget(self.title, 1)
         v_l1.addWidget(self.image, 7, alignment=Qt.AlignCenter)
@@ -31,20 +34,22 @@ class ExerciseWin(QWidget):
         main_l.addLayout(v_l2, 2)
         self.setLayout(main_l)
         self.ok.clicked.connect(self.check_answer)
-        self.set_style(self.title, self.right_answers, self.all_answers, self.ok)
+        set_style_form(self.title, self.right_answers, self.all_answers, self.ok)
 
-    def set_image(self):
-        self.picture = QImage('resources/images/1.png')
-        self.pixmap = QPixmap.fromImage(self.picture)
+    def set_image(self, image):
+        self.pixmap = QPixmap.fromImage(QImage.fromData(QByteArray(image)))
         self.image.setPixmap(self.pixmap)
 
     def check_answer(self):
         pass
 
     def load_question(self):
-        self.set_image()
-        self.title.setText('Тут долне быть какой нибудь вопрос про сечение на рисунке')
-
-    def set_style(self, *args):
-        for widget in args:
-            widget.setFont(QFont('Impact', 14))
+        task = self.db.get_task(1)
+        self.set_image(task[0][3])
+        self.title.setText(task[0][0])
+        self.answers = list()
+        for answer in task:
+            label = DraggableLabel(answer[1], self.all_answers)
+            set_style_label(label)
+            self.all_answers.layout().addWidget(label)
+            self.answers.append(label)

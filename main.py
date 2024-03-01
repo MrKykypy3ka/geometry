@@ -1,7 +1,6 @@
-import traceback
-
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5.QtWidgets import QApplication
 from app.mainWin import MainWin
+import traceback
 import sys
 
 
