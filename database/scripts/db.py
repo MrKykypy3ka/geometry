@@ -20,6 +20,12 @@ class Data:
         except sqlite3.Error as e:
             print(e)
 
+    def get_all_answers(self):
+        try:
+            request = """SELECT text FROM Axioms"""
+            self.data = self.cur.execute(request).fetchall()
+        except sqlite3.Error as e:
+            print(e)
 
     def get_task(self, task):
         self.send_request(task)

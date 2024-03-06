@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout
 from PyQt5.QtGui import QIcon
 from app.tasksWin import TasksWin
+from app.configurator import ConfiguratorWin
 
 
 class MainWin(QWidget):
@@ -28,11 +29,12 @@ class MainWin(QWidget):
         self.settings_btn.clicked.connect(self.show_settings)
 
     def show_lessons(self):
-        self.win = TasksWin()
-        self.win.show()
+        self.win_t = TasksWin()
+        self.win_t.show()
 
     def show_configurator(self):
-        pass
+        self.win_c = ConfiguratorWin()
+        self.win_c.show()
 
     def show_settings(self):
         pass
