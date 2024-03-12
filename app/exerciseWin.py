@@ -1,6 +1,8 @@
 from PyQt5.QtCore import QByteArray
 from PyQt5.QtGui import QIcon, QPixmap, QImage
 from PyQt5.QtWidgets import QWidget, QPushButton, QHBoxLayout
+
+from app.style import set_style_form
 from classes.new_widgets import *
 from database.scripts.db import Data
 

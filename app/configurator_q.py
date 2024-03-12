@@ -1,10 +1,11 @@
-from PyQt5.QtCore import QByteArray, Qt
-from PyQt5.QtGui import QIcon, QPixmap, QImage, QPainter
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QIcon, QPixmap, QImage
 from PyQt5.QtWidgets import QWidget, QPushButton, QHBoxLayout, QLabel, QLineEdit, QListWidget, QVBoxLayout, QFileDialog
 from database.scripts.db import Data
 from classes.new_widgets import ScaledPixmapLabel
 
-class ConfiguratorWin(QWidget):
+
+class ConfiguratorQWin(QWidget):
     def __init__(self):
         super().__init__()
         self.init_ui()
@@ -12,6 +13,7 @@ class ConfiguratorWin(QWidget):
         self.load_answers()
 
     def init_ui(self):
+        self.setWindowFlags(Qt.Window)
         self.setWindowTitle('Геометр')
         self.resize(1280, 720)
         self.setWindowIcon(QIcon('resources/icons/ico.png'))
@@ -85,6 +87,7 @@ class ConfiguratorWin(QWidget):
         self.add_right_btn.clicked.connect(self.add_right)
         self.del_all_btn.clicked.connect(self.del_all)
         self.del_right_btn.clicked.connect(self.del_right)
+        self.ok.clicked.connect(self.write_data)
 
     def load_image(self):
         fname = QFileDialog.getOpenFileName(self, 'Open file', '/home', "Images (*.png *.jpeg *.jpg)")
@@ -94,7 +97,6 @@ class ConfiguratorWin(QWidget):
 
     def load_answers(self):
         self.db.get_all_answers()
-        print(self.db.data)
         for ax in self.db.data:
             self.answers.addItem(ax[0])
 
@@ -117,3 +119,8 @@ class ConfiguratorWin(QWidget):
         if self.answers.selectedItems():
             self.right_answers.addItem(self.answers.selectedItems()[0].text())
             self.answers.takeItem(self.answers.selectedIndexes()[0].row())
+
+    def write_data(self):
+        data = []
+        for i in range(1):
+            self.data.add_question()

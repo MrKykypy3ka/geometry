@@ -30,3 +30,23 @@ class Data:
     def get_task(self, task):
         self.send_request(task)
         return self.data
+
+    def add_question(self, **kwargs):
+        try:
+            sqlite_insert_query = """INSERT INTO Answers (axioms_id, task_id, right)
+                                      VALUES (?, ?, ?);"""
+            data = (kwargs['axioms_id'], kwargs['task_id'], kwargs['right'])
+            self.cur.execute(sqlite_insert_query, data)
+            self.db.commit()
+        except sqlite3.Error as e:
+            print(e)
+
+    def add_answer(self, **kwargs):
+        try:
+            sqlite_insert_query = """INSERT INTO Axioms (group, text)
+                                      VALUES (?, ?);"""
+            data = (kwargs['group'], kwargs['text'])
+            self.cur.execute(sqlite_insert_query, data)
+            self.db.commit()
+        except sqlite3.Error as e:
+            print(e)

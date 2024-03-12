@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="temp">
+    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="configuration win / write to db">
+      <change afterPath="$PROJECT_DIR$/app/configurator_a.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/redactorsWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_q.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/exerciseWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mainWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mainWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tasksWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tasksWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/new_widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/new_widgets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/scripts/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/db.py" afterDir="false" />
     </list>
@@ -46,10 +51,14 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Kykypy3a/PycharmProjects/geometry/app&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kykypy3a\PycharmProjects\geometry\app" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kykypy3a\PycharmProjects\geometry\classes" />
       <recent name="C:\Users\Kykypy3a\PycharmProjects\geometry\resources\images" />
@@ -127,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709643291762</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="configuration win / write to db">
+      <option name="closed" value="true" />
+      <created>1709702589110</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1709702589110</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -147,6 +164,7 @@
     <MESSAGE value="db + ecercise window" />
     <MESSAGE value="drop label + code review" />
     <MESSAGE value="temp" />
-    <option name="LAST_COMMIT_MESSAGE" value="temp" />
+    <MESSAGE value="configuration win / write to db" />
+    <option name="LAST_COMMIT_MESSAGE" value="configuration win / write to db" />
   </component>
 </project>

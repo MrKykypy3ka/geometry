@@ -1,11 +1,11 @@
-from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout
+from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QApplication
 from PyQt5.QtGui import QIcon
 from app.exerciseWin import ExerciseWin
 
 
 class TasksWin(QWidget):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, parent=None):
+        super().__init__(parent=parent)
         self.init_ui()
 
     def init_ui(self):
@@ -30,3 +30,6 @@ class TasksWin(QWidget):
 
     def show_choice(self):
         pass
+
+    def closeEvent(self, event):
+        QApplication.quit()
