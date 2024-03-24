@@ -3,6 +3,7 @@ import sqlite3
 
 class Data:
     def __init__(self, filename):
+        self.data = []
         self.filename = filename
         self.connect()
 
@@ -30,6 +31,13 @@ class Data:
     def get_task(self, task):
         self.send_request(task)
         return self.data
+
+    def get_all_tasks(self):
+        try:
+            request = """SELECT task_id, question, image FROM Tasks"""
+            self.data = self.cur.execute(request).fetchall()
+        except sqlite3.Error as e:
+            print(e)
 
     def add_question(self, **kwargs):
         try:

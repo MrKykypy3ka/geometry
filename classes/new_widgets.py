@@ -28,6 +28,7 @@ class DraggableLabel(QLabel):
         result = drag.exec_(Qt.CopyAction | Qt.MoveAction)
         if result != Qt.MoveAction:
             self.show()
+        self.deleteLater()
 
 
 class DroppableGroupBox(QGroupBox):

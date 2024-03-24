@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QApplication
 from PyQt5.QtGui import QIcon
 from app.exerciseWin import ExerciseWin
+from app.all_answers import AllAnswers
 
 
 class TasksWin(QWidget):
@@ -25,12 +26,12 @@ class TasksWin(QWidget):
         self.blitz_btn.clicked.connect(self.show_blitz)
 
     def show_blitz(self):
-        self.win = ExerciseWin()
-        self.win.show()
-        self.hide()
+        pass
 
     def show_choice(self):
-        pass
+        self.win_a = AllAnswers()
+        self.win_a.show()
+        self.hide()
 
     def closeEvent(self, event):
         QApplication.quit()

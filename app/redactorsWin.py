@@ -34,4 +34,3 @@ class RedactorWin(QWidget):
         self.win_q = ConfiguratorQWin()
         self.win_q.show()
         self.hide()
-
