@@ -7,6 +7,8 @@ from app.redactorsWin import RedactorWin
 class MainWin(QMainWindow):
     def __init__(self):
         super().__init__()
+        self.win_c = None
+        self.win_t = None
         self.init_ui()
 
     def init_ui(self):
@@ -35,8 +37,8 @@ class MainWin(QMainWindow):
         self.win_t.show()
 
     def show_configurator(self):
-        self.win_с = RedactorWin()
-        self.win_с.show()
+        self.win_c = RedactorWin()
+        self.win_c.show()
 
     def show_settings(self):
         pass

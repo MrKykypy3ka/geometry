@@ -28,8 +28,10 @@ class RedactorWin(QWidget):
     def show_answers(self):
         self.win_a = ConfiguratorAWin()
         self.win_a.show()
+        self.hide()
 
     def show_questions(self):
         self.win_q = ConfiguratorQWin()
         self.win_q.show()
+        self.hide()
 

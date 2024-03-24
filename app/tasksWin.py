@@ -27,6 +27,7 @@ class TasksWin(QWidget):
     def show_blitz(self):
         self.win = ExerciseWin()
         self.win.show()
+        self.hide()
 
     def show_choice(self):
         pass

@@ -1,7 +1,6 @@
 from PyQt5.QtCore import Qt, QMimeData
 from PyQt5.QtGui import QDrag, QPainter
 from PyQt5.QtWidgets import QVBoxLayout, QLabel, QGroupBox, QApplication
-
 from app.style import set_style_label
 
 
@@ -25,14 +24,8 @@ class DraggableLabel(QLabel):
         drag.setMimeData(mime_data)
         pixmap = self.grab()
         drag.setPixmap(pixmap)
-
-        # Instead of closing the label, we hide it temporarily
         self.hide()
-
-        # Start drag
         result = drag.exec_(Qt.CopyAction | Qt.MoveAction)
-
-        # If the drop was not successful, we show the label again
         if result != Qt.MoveAction:
             self.show()
 
@@ -57,7 +50,7 @@ class DroppableGroupBox(QGroupBox):
             set_style_label(new_label)
             self.layout().addWidget(new_label)
             new_label.show()
-            event.setDropAction(Qt.MoveAction)  # Set the drop action to be Move
+            event.setDropAction(Qt.MoveAction)
             event.accept()
         else:
             event.ignore()
@@ -65,9 +58,9 @@ class DroppableGroupBox(QGroupBox):
 
 class ScaledPixmapLabel(QLabel):
     scaled = None
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # if no minimum size is set, it will always use the image size
         self.setMinimumSize(1, 1)
 
     def resizeEvent(self, event):
@@ -94,4 +87,3 @@ class ScaledPixmapLabel(QLabel):
                 rect.moveBottom(available.bottom())
             qp = QPainter(self)
             qp.drawPixmap(rect, self.scaled)
-

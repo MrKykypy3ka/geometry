@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="configuration win / write to db">
-      <change afterPath="$PROJECT_DIR$/app/configurator_a.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/redactorsWin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="fix dropLabel, close all windows, windows configurations">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configurator.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_q.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/exerciseWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mainWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mainWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/redactorsWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/redactorsWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/tasksWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tasksWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes/new_widgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/classes/new_widgets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/scripts/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/db.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/app/mainWin.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -144,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709702589110</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fix dropLabel, close all windows, windows configurations">
+      <option name="closed" value="true" />
+      <created>1710218605796</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1710218605796</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +171,7 @@
     <MESSAGE value="drop label + code review" />
     <MESSAGE value="temp" />
     <MESSAGE value="configuration win / write to db" />
-    <option name="LAST_COMMIT_MESSAGE" value="configuration win / write to db" />
+    <MESSAGE value="fix dropLabel, close all windows, windows configurations" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix dropLabel, close all windows, windows configurations" />
   </component>
 </project>
