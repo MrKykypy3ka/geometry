@@ -1,4 +1,4 @@
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import Qt, QBuffer, QByteArray
 from PyQt5.QtGui import QIcon, QPixmap, QImage
 from PyQt5.QtWidgets import QWidget, QPushButton, QHBoxLayout, QLabel, QLineEdit, QListWidget, QVBoxLayout, QFileDialog
 from database.scripts.db import Data
@@ -8,6 +8,7 @@ from classes.new_widgets import ScaledPixmapLabel
 class ConfiguratorQWin(QWidget):
     def __init__(self):
         super().__init__()
+        self.byte_image = None
         self.init_ui()
         self.db = Data('database/geometry.db')
         self.load_answers()
@@ -30,8 +31,8 @@ class ConfiguratorQWin(QWidget):
         self.add_all_btn = QPushButton('<-')
         self.del_all_btn = QPushButton('->')
         answers = QLabel('Ответы')
-        self.answers = QListWidget()
-        self.answers.setWordWrap(True)
+        self.wrong_answers = QListWidget()
+        self.wrong_answers.setWordWrap(True)
         self.add_right_btn = QPushButton('->')
         self.del_right_btn = QPushButton('<-')
         right = QLabel('Правильные варианты')
@@ -56,7 +57,7 @@ class ConfiguratorQWin(QWidget):
         v_l1.addWidget(all)
         v_l1.addWidget(self.all_answers)
         v_l2.addWidget(answers)
-        v_l2.addWidget(self.answers)
+        v_l2.addWidget(self.wrong_answers)
         v_l3.addWidget(right)
         v_l3.addWidget(self.right_answers)
         v_l4.addStretch()
@@ -94,33 +95,44 @@ class ConfiguratorQWin(QWidget):
         if fname[0]:
             self.pixmap = QPixmap.fromImage(QImage(fname[0]))
             self.image.setPixmap(self.pixmap)
+            with open(fname[0], 'rb') as file:
+                self.byte_image = file.read()
 
     def load_answers(self):
         self.db.get_all_answers()
+        self.statements = self.db.data
         for ax in self.db.data:
-            self.answers.addItem(ax[0])
+            self.wrong_answers.addItem(ax[1])
 
     def del_all(self):
         if self.all_answers.selectedItems():
-            self.answers.addItem(self.all_answers.selectedItems()[0].text())
+            self.wrong_answers.addItem(self.all_answers.selectedItems()[0].text())
             self.all_answers.takeItem(self.all_answers.selectedIndexes()[0].row())
 
     def del_right(self):
         if self.right_answers.selectedItems():
-            self.answers.addItem(self.right_answers.selectedItems()[0].text())
+            self.wrong_answers.addItem(self.right_answers.selectedItems()[0].text())
             self.right_answers.takeItem(self.right_answers.selectedIndexes()[0].row())
 
     def add_all(self):
-        if self.answers.selectedItems():
-            self.all_answers.addItem(self.answers.selectedItems()[0].text())
-            self.answers.takeItem(self.answers.selectedIndexes()[0].row())
+        if self.wrong_answers.selectedItems():
+            self.all_answers.addItem(self.wrong_answers.selectedItems()[0].text())
+            self.wrong_answers.takeItem(self.wrong_answers.selectedIndexes()[0].row())
 
     def add_right(self):
-        if self.answers.selectedItems():
-            self.right_answers.addItem(self.answers.selectedItems()[0].text())
-            self.answers.takeItem(self.answers.selectedIndexes()[0].row())
+        if self.wrong_answers.selectedItems():
+            self.right_answers.addItem(self.wrong_answers.selectedItems()[0].text())
+            self.wrong_answers.takeItem(self.wrong_answers.selectedIndexes()[0].row())
 
     def write_data(self):
-        data = []
-        for i in range(1):
-            self.data.add_question()
+        self.db.add_question(question=self.title.text(), image=self.byte_image)
+        self.db.get_all_tasks()
+        task_id = [elem[0] for elem in self.db.data if elem[1] == self.title.text()][0]
+        for x in range(self.all_answers.count()):
+            statement_id = [elem[0] for elem in self.statements if elem[1] == self.all_answers.item(x).text()][0]
+            self.db.add_answer(statement_id=statement_id, task_id=task_id, right=0)
+        for x in range(self.right_answers.count()):
+            statement_id = [elem[0] for elem in self.statements if elem[1] == self.right_answers.item(x).text()][0]
+            self.db.add_answer(statement_id=statement_id, task_id=task_id, right=1)
+        self.close()
+

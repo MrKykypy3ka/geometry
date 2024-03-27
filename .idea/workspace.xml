@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="temp">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2024_13_07__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_24_03_2024_13_07__Changes_.xml" afterDir="false" />
+    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="check right answer &amp; all questions form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configurator_a.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_a.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configurator_q.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_q.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/exerciseWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/geometry.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/geometry.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/scripts/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

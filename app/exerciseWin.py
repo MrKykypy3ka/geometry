@@ -1,7 +1,6 @@
 from PyQt5.QtCore import QByteArray
 from PyQt5.QtGui import QIcon, QPixmap, QImage
 from PyQt5.QtWidgets import QWidget, QPushButton, QHBoxLayout, QMessageBox
-
 from app.style import *
 from classes.new_widgets import *
 from database.scripts.db import Data
@@ -66,11 +65,11 @@ class ExerciseWin(QWidget):
                 self.close()
 
     def load_question(self):
-        task = self.db.get_task(self.task_id)
-        self.set_image(task[0][3])
-        self.title.setText(task[0][0])
+        self.db.get_task(self.task_id)
+        self.set_image(self.db.data[0][3])
+        self.title.setText(self.db.data[0][0])
         self.answers = list()
-        for answer in task:
+        for answer in self.db.data:
             label = DraggableLabel(answer[1], self.all_answers)
             set_style_label(label)
             self.all_answers.layout().addWidget(label)

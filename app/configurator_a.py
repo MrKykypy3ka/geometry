@@ -6,17 +6,19 @@ from database.scripts.db import Data
 class ConfiguratorAWin(QWidget):
     def __init__(self):
         super().__init__()
-        self.init_ui()
         self.db = Data('database/geometry.db')
+        self.db.get_all_topic()
+        self.init_ui()
 
     def init_ui(self):
         self.setWindowTitle('Геометр')
         self.resize(640, 0)
         self.setWindowIcon(QIcon('resources/icons/ico.png'))
         self.title = QLineEdit()
-        self.title.setPlaceholderText('Напишите ответ')
-        self.group_name = QLabel('К какой группе относится утверждение')
+        self.title.setPlaceholderText('Напишите утверждение')
+        self.group_name = QLabel('К какой теме относится утверждение:')
         self.group = QComboBox()
+        self.group.addItems([x[1] for x in self.db.data])
         self.ok = QPushButton('Добавить')
         main_l = QVBoxLayout()
         main_l.addStretch()
@@ -35,3 +37,11 @@ class ConfiguratorAWin(QWidget):
         main_l.addLayout(h_ok, 1)
         main_l.addStretch()
         self.setLayout(main_l)
+        self.ok.clicked.connect(self.write_answer)
+
+    def write_answer(self):
+        topic_id = [elem[0] for elem in self.db.data if elem[1] == self.group.currentText()][0]
+        if self.db.add_statement(topic_id=topic_id, text=self.title.text()):
+            self.close()
+        else:
+            print('Ошибка записи данных')
