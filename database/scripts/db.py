@@ -13,8 +13,8 @@ class Data:
 
     def send_request(self, task):
         try:
-            request = """SELECT Tasks.question, Axioms.text, Answers.right, Tasks.image FROM Answers
-                         JOIN Axioms ON Axioms.axiom_id = Answers.axiom_id
+            request = """SELECT Tasks.question, Statements.text, Answers.right, Tasks.image FROM Answers
+                         JOIN Statements ON Statements.statements_id = Answers.statements_id
                          JOIN Tasks ON Tasks.task_id = Answers.task_id
                          WHERE Answers.task_id = ?"""
             self.data = self.cur.execute(request, (task, )).fetchall()
@@ -23,7 +23,7 @@ class Data:
 
     def get_all_answers(self):
         try:
-            request = """SELECT text FROM Axioms"""
+            request = """SELECT text FROM Statements"""
             self.data = self.cur.execute(request).fetchall()
         except sqlite3.Error as e:
             print(e)
@@ -41,7 +41,7 @@ class Data:
 
     def add_question(self, **kwargs):
         try:
-            sqlite_insert_query = """INSERT INTO Answers (axioms_id, task_id, right)
+            sqlite_insert_query = """INSERT INTO Answers (statements_id, task_id, right)
                                       VALUES (?, ?, ?);"""
             data = (kwargs['axioms_id'], kwargs['task_id'], kwargs['right'])
             self.cur.execute(sqlite_insert_query, data)
@@ -51,7 +51,7 @@ class Data:
 
     def add_answer(self, **kwargs):
         try:
-            sqlite_insert_query = """INSERT INTO Axioms (group, text)
+            sqlite_insert_query = """INSERT INTO Statements (group, text)
                                       VALUES (?, ?);"""
             data = (kwargs['group'], kwargs['text'])
             self.cur.execute(sqlite_insert_query, data)
