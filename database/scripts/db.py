@@ -30,7 +30,7 @@ class Data:
 
     def get_all_tasks(self):
         try:
-            request = """SELECT task_id, question, image FROM Tasks"""
+            request = """SELECT task_id, question, image, topic_id FROM Tasks"""
             self.data = self.cur.execute(request).fetchall()
         except sqlite3.Error as e:
             print(e)

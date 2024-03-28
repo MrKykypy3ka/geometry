@@ -55,7 +55,6 @@ class ExerciseWin(QWidget):
             else:
                 set_style_label_false(answer)
                 my_false_answers += 1
-        print(my_true_answers, my_false_answers)
         if len(right_answers) == my_true_answers and my_false_answers == 0:
             msg = QMessageBox(self)
             msg.setWindowTitle("Завершение")

@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QPushButton, QVBoxLayout, QApplication
 from PyQt5.QtGui import QIcon
 from app.exerciseWin import ExerciseWin
-from app.all_answers import AllAnswers
+from app.all_tasks import AllTasks
 
 
 class TasksWin(QWidget):
@@ -29,9 +29,6 @@ class TasksWin(QWidget):
         pass
 
     def show_choice(self):
-        self.win_a = AllAnswers()
+        self.win_a = AllTasks()
         self.win_a.show()
         self.hide()
-
-    def closeEvent(self, event):
-        QApplication.quit()

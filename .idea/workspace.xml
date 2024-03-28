@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="check right answer &amp; all questions form">
+    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="add task in db &amp; add answer in db">
+      <change afterPath="$PROJECT_DIR$/app/all_tasks.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configurator_a.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/configurator_q.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_q.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/exerciseWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/exerciseWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/all_answers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/tasksWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tasksWin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/geometry.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/geometry.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/scripts/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/db.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710218605796</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add task in db &amp; add answer in db">
+      <option name="closed" value="true" />
+      <created>1711557333044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1711557333044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +182,7 @@
     <MESSAGE value="temp" />
     <MESSAGE value="configuration win / write to db" />
     <MESSAGE value="fix dropLabel, close all windows, windows configurations" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix dropLabel, close all windows, windows configurations" />
+    <MESSAGE value="add task in db &amp; add answer in db" />
+    <option name="LAST_COMMIT_MESSAGE" value="add task in db &amp; add answer in db" />
   </component>
 </project>
