@@ -100,6 +100,7 @@ class ConfiguratorQWin(QWidget):
 
     def load_answers(self):
         self.db.get_all_answers()
+        print(self.db.data)
         self.statements = self.db.data
         for ax in self.db.data:
             self.wrong_answers.addItem(ax[1])
@@ -125,7 +126,8 @@ class ConfiguratorQWin(QWidget):
             self.wrong_answers.takeItem(self.wrong_answers.selectedIndexes()[0].row())
 
     def write_data(self):
-        self.db.add_question(question=self.title.text(), image=self.byte_image)
+        topic_id = [elem[2] for elem in self.db.data if elem[1] == self.right_answers.item(0).text()][0]
+        self.db.add_question(question=self.title.text(), image=self.byte_image, topic=topic_id)
         self.db.get_all_tasks()
         task_id = [elem[0] for elem in self.db.data if elem[1] == self.title.text()][0]
         for x in range(self.all_answers.count()):

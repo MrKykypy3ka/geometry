@@ -69,6 +69,7 @@ class MainWindow(QMainWindow):
         layout.addWidget(group_box1)
         layout.addWidget(group_box2)
 
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     main_window = MainWindow()

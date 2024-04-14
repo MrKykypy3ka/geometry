@@ -23,7 +23,7 @@ class Data:
 
     def get_all_answers(self):
         try:
-            request = """SELECT statement_id, text FROM Statements"""
+            request = """SELECT statement_id, text, topic_id FROM Statements"""
             self.data = self.cur.execute(request).fetchall()
         except sqlite3.Error as e:
             print(e)
@@ -44,9 +44,9 @@ class Data:
 
     def add_question(self, **kwargs):
         try:
-            sqlite_insert_query = """INSERT INTO Tasks (question, image)
-                                      VALUES (?, ?);"""
-            data = (kwargs['question'], kwargs['image'])
+            sqlite_insert_query = """INSERT INTO Tasks (question, image, topic_id)
+                                      VALUES (?, ?, ?);"""
+            data = (kwargs['question'], kwargs['image'], kwargs['topic'])
             self.cur.execute(sqlite_insert_query, data)
             self.db.commit()
         except sqlite3.Error as e:

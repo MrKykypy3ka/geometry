@@ -4,13 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="add task in db &amp; add answer in db">
-      <change afterPath="$PROJECT_DIR$/app/all_tasks.py" afterDir="false" />
+    <list default="true" id="53b3963c-7f3c-4c22-b878-54ecf306e88a" name="Changes" comment="edit database &amp; edit requests">
+      <change afterPath="$PROJECT_DIR$/build/main/Analysis-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/EXE-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PKG-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.pyz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/PYZ-00.toc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/base_library.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/main.pkg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/warn-main.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/main/xref-main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/main.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.spec" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/all_answers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/tasksWin.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/tasksWin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/configurator_q.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configurator_q.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/geometry.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/geometry.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/scripts/db.py" beforeDir="false" afterPath="$PROJECT_DIR$/database/scripts/db.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/temp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +101,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13763.11" />
+        <option value="bundled-python-sdk-d68999036c7f-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.14475.56" />
       </set>
     </attachedChunks>
   </component>
